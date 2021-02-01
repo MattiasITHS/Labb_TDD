@@ -5,6 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import javax.annotation.processing.SupportedAnnotationTypes;
 import java.time.Duration;
 
 class MyClassTest {
@@ -80,5 +81,26 @@ class MyClassTest {
     void testTimeOutGenerateTrue(){
         MyClass testObject = new MyClass();
         Assertions.assertTimeout(Duration.ofNanos(1), () -> testObject.generateTrue());
+    }
+    @Test
+    void testArraySetZeroesToOnes(){
+        ArraySetter testObject = new ArraySetter();  //TEST CODE
+        int[] testArray = {0,3,5,1,0,5,0};             // TEST CODE
+        int[] expectedArray = {1,3,5,1,1,5,1};          //Test Code
+        int[] actualArray = testObject.setZeroToOnes(testArray);  // CUT
+        Assertions.assertArrayEquals(expectedArray, actualArray);
+    }
+    @Test
+    void testArraySetZeroesToOnesLength(){
+        ArraySetter testObject = new ArraySetter();
+        int[] testArrayOk = {1,1,1,1};
+        int[] testArrayTooLong = {1,1,1,1,1,1,1,1,1,1,1};
+        int expectedOk = 4;
+        int expectedTooLong = 10;
+        int[] actual = testObject.setZeroToOnes(testArrayOk);  // CUT
+        int[]actual2 = testObject.setZeroToOnes(testArrayTooLong);
+        Assertions.assertEquals(expectedOk,actual.length);
+        Assertions.assertEquals(expectedTooLong,actual2.length);
+
     }
 }

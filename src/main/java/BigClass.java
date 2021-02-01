@@ -54,7 +54,7 @@ public class BigClass {
             this.number = this.number + number1;
         } else {
             System.out.println("Inga negativa tal!");
-         }
+        }
         return number;
     }
 
