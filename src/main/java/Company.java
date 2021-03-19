@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+// Labb TDD
 public class Company {
      ArrayList<Employee> employeeList = new ArrayList<>();
      private int counter = 1;

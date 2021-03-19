@@ -1,4 +1,5 @@
 public class Employee {
+    // Labb TDD
     private String firstName;
     private String lastName;
     private int age;
