@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="RestfulBooker" tests="8" time="1.334">
+  <testsuite name="Auth / Get Auth Token" id="775b66cb-7caa-4d66-a5f0-202443750849" timestamp="2021-03-22T21:29:08.321Z" tests="3" failures="0" errors="0" time="0.490">
+    <testcase name="Status code is 200" time="0.490" classname="RestfulBooker"/>
+    <testcase name="Username is admin" time="0.490" classname="RestfulBooker"/>
+    <testcase name="Password is password123" time="0.490" classname="RestfulBooker"/>
+  </testsuite>
+  <testsuite name="Bookings / Get Bookings" id="7c971868-6f94-45ce-8f5c-21796086baf8" timestamp="2021-03-22T21:29:08.321Z" tests="3" failures="0" errors="0" time="0.116">
+    <testcase name="Status code is 200" time="0.116" classname="RestfulBooker"/>
+    <testcase name="Bookinglist is not empty" time="0.116" classname="RestfulBooker"/>
+    <testcase name="Bookinglist contains 22 BookingIDs" time="0.116" classname="RestfulBooker"/>
+  </testsuite>
+  <testsuite name="Bookings / Create new Booking" id="836c2935-1870-4635-bf62-625775d6ad8e" timestamp="2021-03-22T21:29:08.321Z" tests="8" failures="0" errors="0" time="0.114">
+    <testcase name="Status code is 200" time="0.114" classname="RestfulBooker"/>
+    <testcase name="Check firstname of new Booking" time="0.114" classname="RestfulBooker"/>
+    <testcase name="Check lastname of new Booking" time="0.114" classname="RestfulBooker"/>
+    <testcase name="Check price of new booking" time="0.114" classname="RestfulBooker"/>
+    <testcase name="Check depositpaid of new booking" time="0.114" classname="RestfulBooker"/>
+    <testcase name="Check checkin date of new booking" time="0.114" classname="RestfulBooker"/>
+    <testcase name="Check checkout date of new booking" time="0.114" classname="RestfulBooker"/>
+    <testcase name="Check the additionalneeds of new booking" time="0.114" classname="RestfulBooker"/>
+  </testsuite>
+  <testsuite name="Bookings / Get Bookings created 1 booking" id="cfc632b1-daa9-4f43-86b9-a583c129e176" timestamp="2021-03-22T21:29:08.321Z" tests="3" failures="0" errors="0" time="0.121">
+    <testcase name="Status code is 200" time="0.121" classname="RestfulBooker"/>
+    <testcase name="Bookinglist contains 23 BookingIDs" time="0.121" classname="RestfulBooker"/>
+    <testcase name="Bookinglist is now containing bookingID 33" time="0.121" classname="RestfulBooker"/>
+  </testsuite>
+  <testsuite name="Bookings / Get Booking by ID" id="4c5d75e1-294d-43c2-a308-4f3ddef2aaae" timestamp="2021-03-22T21:29:08.321Z" tests="2" failures="0" errors="0" time="0.118">
+    <testcase name="Status code is 200" time="0.118" classname="RestfulBooker"/>
+    <testcase name="Bookingid is not null" time="0.118" classname="RestfulBooker"/>
+  </testsuite>
+  <testsuite name="Bookings / Update Booking" id="bb318c03-9d7e-4f71-8be5-bab8e42f8e30" timestamp="2021-03-22T21:29:08.321Z" tests="3" failures="0" errors="0" time="0.116">
+    <testcase name="Status code is 200" time="0.116" classname="RestfulBooker"/>
+    <testcase name="New firstname set to James" time="0.116" classname="RestfulBooker"/>
+    <testcase name="New checkin date is set to 2020-03-07" time="0.116" classname="RestfulBooker"/>
+  </testsuite>
+  <testsuite name="Bookings / Update Booking (partial)" id="0f1845d7-29f3-4d96-8b07-aea7742ae74e" timestamp="2021-03-22T21:29:08.321Z" tests="4" failures="0" errors="0" time="0.146">
+    <testcase name="Status code is 200" time="0.146" classname="RestfulBooker"/>
+    <testcase name="New firstname set to Jim" time="0.146" classname="RestfulBooker"/>
+    <testcase name="Lastname is still Brown" time="0.146" classname="RestfulBooker"/>
+    <testcase name="Additionalneeds changed to Breakfast and dinner" time="0.146" classname="RestfulBooker"/>
+  </testsuite>
+  <testsuite name="Bookings / Delete Booking" id="3037ea6e-78ab-495c-a6b8-b457033c462f" timestamp="2021-03-22T21:29:08.321Z" tests="3" failures="0" errors="0" time="0.113">
+    <testcase name="Status code is 201" time="0.113" classname="RestfulBooker"/>
+    <testcase name="Response should be Not Found" time="0.113" classname="RestfulBooker"/>
+    <testcase name="Response code 404" time="0.113" classname="RestfulBooker"/>
+  </testsuite>
+</testsuites>
