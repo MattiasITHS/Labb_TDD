@@ -12,7 +12,7 @@ public class Labb1Test {
         person1.setFirstName("Karl");
         person1.setLastName("Karlsson");
         company.employeeList.add(person1);
-        Assertions.assertEquals("Karl",person1.getFirstName());
+        Assertions.assertEquals("Kar",person1.getFirstName());
         Assertions.assertEquals("Karlsson",person1.getLastName());
     }
 
