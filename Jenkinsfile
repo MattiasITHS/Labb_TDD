@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/MattiasITHS/Labb_TDD.git'
-                sh './mvnw clean compile'
-                // bat '.\\mvnw clean compile'
+                sh './mvn clean compile'
+                // bat '.\\mvn clean compile'
             }
         }
         stage('Test') {
             steps {
-                sh './mvnw test'
-                // bat '.\\mvnw test'
+                sh './mvn test'
+                // bat '.\\mvn test'
             }
 
             post {
