@@ -5,12 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/MattiasITHS/Labb_TDD.git'
-                sh "mvn compile"
+                bat "mvn compile"
             }
         }
         stage('Test') {
             steps {
-                sh "mvn test"
+                bat "mvn test"
             }
 
             post {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('newman') {
             steps {
-                sh 'newman run RestfulBooker.postman_collection.json --environment RestfulBooker.postman_environment.json --reporters junit'
+                bat 'newman run RestfulBooker.postman_collection.json --environment RestfulBooker.postman_environment.json --reporters junit'
             }
                 post {
                     always {
@@ -33,7 +33,7 @@ pipeline {
         }
         stage('Robot Framework System tests with Selenium') {
             steps {
-                sh 'robot --variable BROWSER:headlesschrome -d Results Tests/LabbWebTest.robot Tests/VG_test.robot'
+                bat 'robot --variable BROWSER:headlesschrome -d Results Tests/LabbWebTest.robot Tests/VG_test.robot'
                     }
                     post {
                         always {
