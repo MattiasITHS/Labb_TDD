@@ -20,7 +20,7 @@ pipeline {
             post {
                 always {
                     junit '**/TEST*.xml'
-                    chuckNorris()
+                    //chuckNorris()
                 }
             }
         }
@@ -31,7 +31,7 @@ pipeline {
                 post {
                     always {
                         junit '**/*xml'
-                            chuckNorris()
+                            //chuckNorris()
                     }
                 }
         }
@@ -56,7 +56,7 @@ pipeline {
                                     ]
                                 )
                             }
-                                chuckNorris()
+                                //chuckNorris()
                         }
                     }
         }
