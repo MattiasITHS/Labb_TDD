@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/MattiasITHS/Labb_TDD.git'
-                sh "mvn clean compile"
+                sh "mvn compile"
             }
         }
         stage('Test') {
