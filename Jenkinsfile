@@ -21,9 +21,7 @@ pipeline {
         }
                 stage('newman') {
                     steps {
-                    git 'https://github.com/MattiasITHS/Postman_Labb.git'
-                        sh 'npm install'
-                        sh 'npm run RestfulBooker.postman_collection.json --environment RestfulBooker.postman_environment.json --reporters junit'
+                        sh 'newman run RestfulBooker.postman_collection.json --environment RestfulBooker.postman_environment.json --reporters junit'
                     }
                     post {
                         always {
