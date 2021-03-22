@@ -2,13 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/MattiasITHS/Labb_TDD.git'
-                }
-            }
         stage('Build') {
             steps {
+                git 'https://github.com/MattiasITHS/Labb_TDD.git'
                 sh "mvn clean compile"
             }
         }
